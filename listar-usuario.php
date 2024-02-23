@@ -1,6 +1,6 @@
 <h1>Listar Usuários</h1>
 <?php
-    $sql = "SELECT * FROM usuarios";
+    $sql = "SELECT * FROM usuarios ";
 
     $res = $conn->query($sql);
 
@@ -28,7 +28,8 @@
 
                 <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){
                     location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\"
-                    class='btn btn-danger'>Excluir</button>
+                    class='btn btn-danger'>Excluir</button> 
+                    
             </td>";
             print "</tr>";
         }

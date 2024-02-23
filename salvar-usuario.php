@@ -11,13 +11,14 @@
      
      $res = $conn->query($sql);
 
-     if($res==true){
-        print "<script>alert('Cadastro realizado com sucesso');
-        </script>";
-        print "script>location.href='?page=listar';</script>";
-     }else{
-        print "<script>location.href='?page=listar';</script>";
-     }
+     if ($res == true) {
+      echo "<script>alert('Cadastro realizado com sucesso');</script>";
+      echo "<script>location.href='?page=listar';</script>";
+  } else {
+      echo "<script>location.href='?page=listar';</script>";
+  }
+  
+  
      
      
      break;
@@ -32,20 +33,19 @@
                nome='{$nome}',
                email='{$email}',
                senha='{$senha}',
-               data_nasc='{$data_nasc}',
+               data_nasc='{$data_nasc}'
             WHERE
                id=".$_REQUEST["id"];
              $res = $conn->query($sql);
              
-             if($res==true){
-               print "<script>alert('Editado com sucesso');
-            </script>";
-               print "<script>location.href='?page=listar';</script>";
-             }else{
-               print "<script>alert('Não foi possível editar');
-            </script>";
-               print "<script>location.href='?page=listar';</script>";
-             }
+             if ($res == true) {
+               echo "<script>alert('Editado com sucesso');</script>";
+               echo "<script>location.href='?page=listar';</script>";
+           } else {
+               echo "<script>alert('Não foi possível editar');</script>";
+               echo "<script>location.href='?page=listar';</script>";
+           }
+           
         break;
 
         case 'excluir':
@@ -53,12 +53,13 @@
 
             $res = $conn->query($sql);
 
-            if($res==true) {
-               print "<script>alert('Excluído com sucesso');</script>";
-               print "<script>location.href='?page=listar';</script>";
-            }else{
-               print "<script>alert('Não foi possível excluir');</script>";
-               print "<script>location.href='?page=listar';</script>";
-            }
+            if ($res == true) {
+               echo "<script>alert('Excluído com sucesso');</script>";
+               echo "<script>location.href='?page=listar';</script>";
+           } else {
+               echo "<script>alert('Não foi possível excluir');</script>";
+               echo "<script>location.href='?page=listar';</script>";
+           }
+           
             break;
  }

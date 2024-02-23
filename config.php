@@ -5,6 +5,6 @@
     define('PASS','');
     define('BASE', 'first');
 
-    $conn = new mysqli(HOST,USER,PASS,BASE);
+    $conn = new mysqli (HOST,USER,PASS,BASE);
 
     
